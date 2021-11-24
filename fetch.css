@@ -1,0 +1,187 @@
+:root {
+  --body-background: rgb(219, 219, 219);
+  --card-color: rgb(240, 240, 240);
+  --button-bgcolor: #6253f0;
+  --button-color: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+@media screen and (min-width: 450px) {
+  .html {
+    font-size: 65%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .html {
+    font-size: 70%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .html {
+    font-size: 75%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .html {
+    font-size: 80%;
+  }
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background-color: var(--body-background);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+.p1 {
+  font-size: 2rem;
+}
+a[href] {
+  text-decoration: none;
+  color: var(--button-color);
+}
+.grid-1x2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.card {
+  width: 55vw;
+  height: 75vh;
+  background-color: var(--card-color);
+  display: grid;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px #4e4e4e;
+  transition: all 0.5s;
+  margin: 8rem 1vw;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+@media screen and (min-width: 450px) {
+  .card {
+    width: 45vw;
+    height: 75vh;
+    margin: 8rem 1vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    width: 35vw;
+    height: 75vh;
+    margin: 8rem 1vw;
+  }
+}
+@media screen and (min-width: 980px) {
+  .card {
+    width: 30vw;
+    height: 75vh;
+    margin: 8rem 1vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 25vw;
+    height: 75vh;
+    margin: 8rem 1vw;
+  }
+}
+.upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.images {
+  background-color: silver;
+  height: 25vh;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+@media screen and (min-width: 450px) {
+  .upper {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .upper {
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 980px) {
+  .upper {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .upper {
+    width: 20vw;
+  }
+}
+.submit {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.8rem;
+  background-color: var(--button-bgcolor);
+  color: var(--button-color);
+  border-radius: 5px;
+  outline: 0;
+  margin-top: 4rem;
+  padding: 1rem 5rem;
+  transition: all 0.5s;
+}
+.submit:hover {
+  box-shadow: 0 0 2px 2px #4e4e4e;
+}
+/*-----------------------------------2nd page------------------------------------*/
+.list {
+  padding-top: 5rem;
+  background-color: var(--body-background);
+  display: flex;
+  list-style-type: none;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 45vw;
+  height: 65vh;
+  margin: 0 22vw;
+  margin-top: 7rem;
+  box-shadow: 0 0 10px 10px #4e4e4e;
+}
+.details {
+  color: black;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.email {
+  margin: 0 2vw;
+  margin-bottom: 2rem;
+}
+.submit2 {
+  font-size: 1.8rem;
+  background-color: var(--button-bgcolor);
+  color: var(--button-color);
+  border-radius: 7px;
+  outline: 0;
+  margin-top: 8.2rem;
+  padding: 1rem 0;
+  width: 100%;
+}
