@@ -7,7 +7,7 @@ let fetchUser=async function(){
 }
 //----------------------------------------------------------------------------------------------------------
 //-------------------------------for displaying the user data-------------------
-let displayUser= async function(){
+let displayUserCard= async function(){
     let mainDiv=document.querySelector(".main");
     let users=await fetchUser();
      users.forEach((user)=>{
@@ -55,7 +55,7 @@ let displayUser= async function(){
   //-------------------------
 });
 }
-displayUser();
+displayUserCard();
 
 //----------------------------------------------------------------------------------------------------------
 //---------------------------------display the user full information--------------------
@@ -63,10 +63,13 @@ let showMoreInformation=async function(username){
   let unorderList=document.querySelector(".userList")
   let information=await fetchUser();
   let index=information.findIndex((info)=>info.username===username)
-  let indexed=information[index];
-  let userAddress=indexed.address;
+  let userFullInformation=information[index];
+  //------------------user address-------
+  let userAddress=userFullInformation.address;
   let addressGeo=userAddress.geo;
-   console.log(userAddress);
+  //-------------user company
+  let company=userFullInformation.company
+   console.log(company);
 // ---------------------appending data------------------------------
        let userList=document.createElement('li')
         userList.classList.add("list");
@@ -77,22 +80,22 @@ let showMoreInformation=async function(username){
         //------------------------------------------
         let span1=document.createElement('span');
         span1.classList.add('email')
-        span1.textContent=`User Id:--- ${indexed.id}`;
+        span1.textContent=`User Id:--- ${userFullInformation.id}`;
       //------------------------------------------
         myDiv.appendChild(span1);
         let span2=document.createElement('span');
         span2.classList.add('email')
-        span2.textContent=`Name:--- ${indexed.name}`;
+        span2.textContent=`Name:--- ${userFullInformation.name}`;
         myDiv.appendChild(span2);
     //------------------------------------------
         let span3=document.createElement('span');
          span3.classList.add('email')
-        span3.textContent=`UserName:--- ${indexed.username}`;
+        span3.textContent=`UserName:--- ${userFullInformation.username}`;
         myDiv.appendChild(span3);
         //-----------------------------------------------
         let span4=document.createElement('span');
          span4.classList.add('email')
-        span4.textContent=`User Email:--- ${indexed.email}`;
+        span4.textContent=`User Email:--- ${userFullInformation.email}`;
         myDiv.appendChild(span4);
     //---------------------------------------------------
         let span5=document.createElement('span');
@@ -102,6 +105,11 @@ let showMoreInformation=async function(username){
         lat:${addressGeo.lat},lng:${addressGeo.lng}  `;
         myDiv.appendChild(span5);
         //-------------------------------------------------
+        let span6=document.createElement('span');
+         span6.classList.add('email')
+        span6.textContent=`Company:---  Name:${company.name},catchPhrase:${company.catchPhrase},
+        bs:${company.bs} `;
+        myDiv.appendChild(span6);
         //--------------------------------
         let submitButton=document.createElement('button');
         submitButton.classList.add('submit2');
