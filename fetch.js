@@ -69,7 +69,7 @@ let showMoreInformation=async function(username){
   let addressGeo=userAddress.geo;
   //-------------user company
   let company=userFullInformation.company
-   console.log(company);
+  //  console.log(company);
 // ---------------------appending data------------------------------
        let userList=document.createElement('li')
         userList.classList.add("list");
@@ -97,14 +97,14 @@ let showMoreInformation=async function(username){
          span4.classList.add('email')
         span4.textContent=`User Email:--- ${userFullInformation.email}`;
         myDiv.appendChild(span4);
-    //---------------------------------------------------
+    //-----------------------appending user address----------------------------
         let span5=document.createElement('span');
          span5.classList.add('email')
         span5.textContent=`Address:---  street:${userAddress.street},suite:${userAddress.suite},
         city:${userAddress.city},zipcode:${userAddress.zipcode},
         lat:${addressGeo.lat},lng:${addressGeo.lng}  `;
         myDiv.appendChild(span5);
-        //-------------------------------------------------
+        //----------------------appending company address---------------------------
         let span6=document.createElement('span');
          span6.classList.add('email')
         span6.textContent=`Company:---  Name:${company.name},catchPhrase:${company.catchPhrase},
