@@ -43,7 +43,7 @@ a[href] {
 }
 .card {
   width: 70vw;
-  height: 75vh;
+  height: 65vh;
   background-color: var(--card-color);
   display: grid;
   justify-content: center;
@@ -138,8 +138,8 @@ a[href] {
 /*-----------------------------------2nd page------------------------------------*/
 /*------------------------this div is the main div---------------------------------*/
 .usersData {
-  margin: 3vh 0.5rem;
-  width: 98vw;
+  margin: 3vh 0.1rem;
+  width: 99vw;
   height: 80vh;
   transition: all 0.5s;
   border-radius: 10px;
@@ -258,16 +258,24 @@ a[href] {
 /*----------------------------------------------------------------------------------------------------------*/
 /*-------------font of the the label and span-----------*/
 .details {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #fff;
 }
 .lab {
   color: #02bfcb;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #fff;
+}
+@media Screen and (min-width: 768px) {
+  .details {
+    font-size: 1.1rem;
+  }
+  .lab {
+    font-size: 1.3rem;
+  }
 }
 @media Screen and (min-width: 768px) {
   .details {
