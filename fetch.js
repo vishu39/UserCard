@@ -48,7 +48,7 @@ let displayUserCard= async function(){
   anchorTag.id="click"
   anchorTag.href=`user.html`;
   //-----------------sending the username to the url search path------------------------
-  anchorTag.search=`${user.username}`
+  anchorTag.search=`${user.id}`
   console.log(anchorTag);
   anchorTag.textContent="More Information";
   submitButton.appendChild(anchorTag);
@@ -59,69 +59,77 @@ displayUserCard();
 
 //----------------------------------------------------------------------------------------------------------
 //---------------------------------display the user full information--------------------
-let showMoreInformation=async function(username){
-  let unorderList=document.querySelector(".userList")
-  let information=await fetchUser();
-  let index=information.findIndex((info)=>info.username===username)
-  let userFullInformation=information[index];
+let showMoreInformation=async function(id){
+  let users= await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+  let userId=await users.json();
+  let mainDiv=document.querySelector(".usersData")
   //------------------user address-------
-  let userAddress=userFullInformation.address;
+  let userAddress=userId.address;
   let addressGeo=userAddress.geo;
-  //-------------user company
-  let company=userFullInformation.company
-  //  console.log(company);
-// ---------------------appending data------------------------------
-       let userList=document.createElement('li')
-        userList.classList.add("list");
-        unorderList.appendChild(userList)
-        let myDiv=document.createElement('div');
-        myDiv.classList.add("details");
-        userList.appendChild(myDiv);
-        //------------------------------------------
-        let span1=document.createElement('span');
-        span1.classList.add('email')
-        span1.textContent=`User Id:--- ${userFullInformation.id}`;
-      //------------------------------------------
-        myDiv.appendChild(span1);
-        let span2=document.createElement('span');
-        span2.classList.add('email')
-        span2.textContent=`Name:--- ${userFullInformation.name}`;
-        myDiv.appendChild(span2);
-    //------------------------------------------
-        let span3=document.createElement('span');
-         span3.classList.add('email')
-        span3.textContent=`UserName:--- ${userFullInformation.username}`;
-        myDiv.appendChild(span3);
-        //-----------------------------------------------
-        let span4=document.createElement('span');
-         span4.classList.add('email')
-        span4.textContent=`User Email:--- ${userFullInformation.email}`;
-        myDiv.appendChild(span4);
-    //-----------------------appending user address----------------------------
-        let span5=document.createElement('span');
-         span5.classList.add('email')
-        span5.textContent=`Address:---  street:${userAddress.street},suite:${userAddress.suite},
-        city:${userAddress.city},zipcode:${userAddress.zipcode},
-        lat:${addressGeo.lat},lng:${addressGeo.lng}  `;
-        myDiv.appendChild(span5);
-        //----------------------appending company address---------------------------
-        let span6=document.createElement('span');
-         span6.classList.add('email')
-        span6.textContent=`Company:---  Name:${company.name},catchPhrase:${company.catchPhrase},
-        bs:${company.bs} `;
-        myDiv.appendChild(span6);
-        //--------------------------------
-        let submitButton=document.createElement('button');
-        submitButton.classList.add('submit2');
-        submitButton.type='submit';
-        myDiv.appendChild(submitButton);
-        //-------------------------
-        let anchorTag=document.createElement('a');
-        anchorTag.href="index.html";
-        anchorTag.textContent="Go Back";
-        submitButton.appendChild(anchorTag);
-      }
+  // //-------------user company
+  let company=userId.company
+   console.log(userId);
+   let html='';
+//---------------------appending data------------------------------
+html +=`
+<div class="grid-1x3">
+<div class="userdetails">
+<img class="userimage1" src="avatar-3637425_960_720.png">
+<div class="addresslabel">
+<label class="userlab">User Details</label>
+</div>
+  <label class="lab">UserId</label>
+  <span class="email">${userId.id}</span>
+  <label class="lab">User Name</label>
+  <span class="email">${userId.name}</span>
+  <label class="lab">User Username</label>
+  <span class="email">${userId.username}</span>
+  <label class="lab">User Email</label>
+  <span class="email">${userId.email}</span>
+  <label class="lab">User Phone No.</label>
+  <span class="email">${userId.phone}</span>
+  </div>
+  
+  <div class="second">
+  <div class="Address">
+  <div class="addresslabel">
+  <label>User Address</label>
+  </div>
+  <br>
+  <label class="lab">Street:</label>
+  <span class="email">${userAddress.street}</span>
+  <label class="lab">Suite:</label>
+    <span class="email">${userAddress.suite}</span>
+    <label class="lab">City:</label>
+    <span class="email">${userAddress.city}</span>
+    <label class="lab">ZipCode:</label>
+    <span class="email">${userAddress.zipcode}</span>
+    <label class="lab">Latitude:</label>
+    <span class="email">lat:${addressGeo.lat}</span>
+    <label class="lab">Longitude:</label>
+    <span class="email">lng:${addressGeo.lng} </span>
+    </div>
+    <br>
+    <div class="Company">
+    <div class="addresslabel">
+    <label>User Company</label>
+    </div>
+    <br>
+    <label class="lab">Name:</label>
+  <span class="email">${company.name}</span>
+  <label class="lab">catchPhrase:</label>
+    <span class="email">${company.catchPhrase}</span>
+    <label class="lab">bs:</label>
+    <span class="email">${company.bs}</span>
+       </div>
+</div>
+</div>
+<div class="btndiv">
+    <button class="submit2"><a href="index.html">Go back</a></button>
+  </div>`
+mainDiv.innerHTML = html;
+}
       //---------------------getting the value of url search path------------------
-      var username=window.location.search.slice(1);
-      console.log(username);
-showMoreInformation(username);
+      var id=window.location.search.slice(1);
+      console.log(id);
+showMoreInformation(id);
