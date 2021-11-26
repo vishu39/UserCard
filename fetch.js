@@ -78,15 +78,15 @@ html +=`
 <div class="addresslabel">
 <label class="userlab">User Details</label>
 </div>
-  <label class="lab">UserId</label>
+  <label class="lab">UserId:-</label>
   <span class="email">${userId.id}</span>
-  <label class="lab">User Name</label>
+  <label class="lab">User Name:-</label>
   <span class="email">${userId.name}</span>
-  <label class="lab">User Username</label>
+  <label class="lab">User Username:-</label>
   <span class="email">${userId.username}</span>
-  <label class="lab">User Email</label>
+  <label class="lab">User Email:-</label>
   <span class="email">${userId.email}</span>
-  <label class="lab">User Phone No.</label>
+  <label class="lab">User Phone No.:-</label>
   <span class="email">${userId.phone}</span>
   </div>
   
@@ -96,17 +96,17 @@ html +=`
   <label>User Address</label>
   </div>
   <br>
-  <label class="lab">Street:</label>
+  <label class="lab">Street:-</label>
   <span class="email">${userAddress.street}</span>
-  <label class="lab">Suite:</label>
+  <label class="lab">Suite:-</label>
     <span class="email">${userAddress.suite}</span>
-    <label class="lab">City:</label>
+    <label class="lab">City:-</label>
     <span class="email">${userAddress.city}</span>
-    <label class="lab">ZipCode:</label>
+    <label class="lab">ZipCode:-</label>
     <span class="email">${userAddress.zipcode}</span>
-    <label class="lab">Latitude:</label>
+    <label class="lab">Latitude:-</label>
     <span class="email">lat:${addressGeo.lat}</span>
-    <label class="lab">Longitude:</label>
+    <label class="lab">Longitude:-</label>
     <span class="email">lng:${addressGeo.lng} </span>
     </div>
     <br>
@@ -115,11 +115,11 @@ html +=`
     <label>User Company</label>
     </div>
     <br>
-    <label class="lab">Name:</label>
+    <label class="lab">Name:-</label>
   <span class="email">${company.name}</span>
-  <label class="lab">catchPhrase:</label>
+  <label class="lab">catchPhrase:-</label>
     <span class="email">${company.catchPhrase}</span>
-    <label class="lab">bs:</label>
+    <label class="lab">bs:-</label>
     <span class="email">${company.bs}</span>
        </div>
 </div>
