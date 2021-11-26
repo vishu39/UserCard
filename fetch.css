@@ -1,31 +1,11 @@
 :root {
-  --body-background: rgb(219, 219, 219);
-  --card-color: rgb(240, 240, 240);
-  --button-bgcolor: #6253f0;
-  --button-color: #fff;
+  --body-background: #010118;
+  --card-color: #00000c;
+  --button-bgcolor: #02bfcb;
+  --button-color: rgb(8, 0, 0);
 }
 html {
   font-size: 62.5%;
-}
-@media screen and (min-width: 450px) {
-  .html {
-    font-size: 65%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .html {
-    font-size: 70%;
-  }
-}
-@media screen and (min-width: 980px) {
-  .html {
-    font-size: 75%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .html {
-    font-size: 80%;
-  }
 }
 *,
 :after,
@@ -34,6 +14,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Yanone Kaffeesatz", sans-serif;
   background-color: var(--body-background);
 }
@@ -61,8 +43,8 @@ a[href] {
   background-color: var(--card-color);
   display: grid;
   justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 10px #4e4e4e;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px #02bfcb;
   transition: all 0.5s;
   margin: 8rem 1vw;
 }
@@ -98,6 +80,7 @@ a[href] {
   }
 }
 .upper {
+  width: 55vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,31 +89,31 @@ a[href] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
 }
 .images {
-  background-color: silver;
   height: 25vh;
-  border: 1px solid black;
+  border: 2px solid #02bfcb;
   border-radius: 100%;
 }
 @media screen and (min-width: 450px) {
   .upper {
-    width: 40vw;
+    width: 45vw;
   }
 }
 @media screen and (min-width: 768px) {
   .upper {
-    width: 30vw;
+    width: 35vw;
   }
 }
 @media screen and (min-width: 980px) {
   .upper {
-    width: 20vw;
+    width: 30vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .upper {
-    width: 20vw;
+    width: 25vw;
   }
 }
 .submit {
@@ -139,49 +122,168 @@ a[href] {
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 1.8rem;
   background-color: var(--button-bgcolor);
-  color: var(--button-color);
   border-radius: 5px;
   outline: 0;
   margin-top: 4rem;
   padding: 1rem 5rem;
   transition: all 0.5s;
+  color: black;
 }
 .submit:hover {
-  box-shadow: 0 0 2px 2px #4e4e4e;
+  background-color: #004f55;
 }
 /*-----------------------------------2nd page------------------------------------*/
-.list {
-  padding-top: 5rem;
-  background-color: var(--body-background);
-  display: flex;
-  list-style-type: none;
-  font-size: 1.5rem;
-  border: 1px solid black;
+/*------------------------this div contain all the data*/
+.usersData {
+  margin: 3vh 0.5rem;
+  width: 98vw;
+  height: 80vh;
+  transition: all 0.5s;
   border-radius: 10px;
-  width: 45vw;
-  height: 75vh;
-  margin: 0 22vw;
-  margin-top: 7rem;
-  box-shadow: 0 0 10px 10px #4e4e4e;
 }
-.details {
-  color: black;
-  font-size: 1.8rem;
-  display: flex;
-  flex-direction: column;
+.usersData:hover {
+  transform: scale(1.02);
+}
+@media screen and (min-width: 460px) {
+  .usersData {
+    width: 95%;
+    height: 90vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .usersData {
+    margin: 10vh 20vw;
+    margin: 7vh 12vw;
+    width: 70%;
+    height: 90vh;
+  }
+}
+/*--------------------------------------------------------*/
+.grid-1x3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
+  padding: 1rem;
 }
+/*------------------------------------------------------------------------------*/
+.userimage1 {
+  display: flex;
+  width: 90%;
+  border-radius: 5%;
+  background-color: rgb(136, 130, 130);
+  height: 80%;
+  box-shadow: 0 0 3px 3px #02bfcb;
+  border-bottom: 1px solid #fff;
+}
+@media Screen and (min-width: 768px) {
+  .userimage1 {
+    width: 100%;
+  }
+}
+/*---------------------------user detail div------------------------------------------*/
+.userdetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95%;
+  height: 100%;
+  color: #fff;
+  padding: 1rem;
+  background-color: var(--card-color);
+  list-style-type: none;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #02bfcb;
+  transition: all 0.5s;
+}
+.userdetails:hover {
+  transform: scale(1.02);
+}
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------company and address data---------------------------------------------*/
+.Address {
+  padding: 1rem;
+  display: grid;
+  background-color: var(--card-color);
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 58%;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px #02bfcb;
+  transition: all 0.5s;
+}
+.Address:hover {
+  transform: scale(1.02);
+}
+.addresslabel {
+  font-size: 1.1rem;
+  color: #02bfcb;
+  text-decoration: underline;
+}
+@media screen and (min-width: 460px) {
+  .addresslabel {
+    font-size: 1.5rem;
+  }
+}
+@media Screen and (min-width: 768px) {
+  .addresslabel {
+    font-size: 2rem;
+  }
+}
+.Company {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--card-color);
+  box-shadow: 0 0 5px 1px #02bfcb;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 40%;
+  color: #fff;
+  transition: all 0.5s;
+}
+.Company:hover {
+  transform: scale(1.02);
+}
+/*----------------------------------------------------------------------------------------------------------*/
+/*-------------font of the the label and span-----------*/
 .email {
-  margin: 0 2vw;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #fff;
+}
+.lab {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #fff;
+}
+@media Screen and (min-width: 768px) {
+  .email {
+    font-size: 1.3rem;
+  }
+  .lab {
+    font-size: 1.5rem;
+  }
+}
+/*-------------------------------------------------------*/
+/*----------------------------------Button Data-----------------------------------------------*/
+.btndiv {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 .submit2 {
-  font-size: 1.8rem;
+  position: relative;
+  font-size: 1.6rem;
   background-color: var(--button-bgcolor);
   color: var(--button-color);
-  border-radius: 7px;
+  border-radius: 10px;
   outline: 0;
-  margin-top: 8.2rem;
-  padding: 1rem 0;
-  width: 100%;
+  padding: 1.5rem 0;
+  width: 98%;
+}
+.submit2:hover {
+  background-color: #004f55;
+}
+.userlab {
+  margin-left: 1rem;
 }
