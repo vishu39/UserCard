@@ -34,11 +34,15 @@ a[href] {
 }
 .grid-1x2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 0.1fr);
+}
+@media screen and (min-width: 768px) {
+  .grid-1x2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .card {
-  width: 55vw;
+  width: 70vw;
   height: 75vh;
   background-color: var(--card-color);
   display: grid;
@@ -46,37 +50,36 @@ a[href] {
   border-radius: 15px;
   box-shadow: 0 0 20px 1px #02bfcb;
   transition: all 0.5s;
-  margin: 8rem 1vw;
+  margin: 2rem 15vw;
 }
 .card:hover {
   transform: scale(1.03);
 }
 @media screen and (min-width: 450px) {
   .card {
-    width: 45vw;
-    height: 75vh;
-    margin: 8rem 1vw;
+    width: 70vw;
+    margin: 2rem 15vw;
   }
 }
 @media screen and (min-width: 768px) {
   .card {
-    width: 35vw;
-    height: 75vh;
-    margin: 8rem 1vw;
+    width: 30vw;
+    margin: 3rem 0;
+    margin-left: 2vw;
   }
 }
 @media screen and (min-width: 980px) {
   .card {
     width: 30vw;
-    height: 75vh;
-    margin: 8rem 1vw;
+    margin: 3rem 0;
+    margin-left: 0.5vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .card {
     width: 25vw;
-    height: 75vh;
-    margin: 8rem 1vw;
+    margin: 3rem 0;
+    margin-left: 3vw;
   }
 }
 .upper {
@@ -225,7 +228,7 @@ a[href] {
   color: #02bfcb;
   margin-bottom: 2rem;
   text-decoration: underline;
-  text-shadow: 2px 1px #fff;
+  text-shadow: 1px 1px #fff;
 }
 @media screen and (min-width: 460px) {
   .addresslabel {
