@@ -79,15 +79,15 @@ html +=`
 <label class="userlab">User Details</label>
 </div>
   <label class="lab">UserId:-</label>
-  <span class="email">${userId.id}</span>
+  <span class="details">${userId.id}</span>
   <label class="lab">User Name:-</label>
-  <span class="email">${userId.name}</span>
+  <span class="details">${userId.name}</span>
   <label class="lab">User Username:-</label>
-  <span class="email">${userId.username}</span>
+  <span class="details">${userId.username}</span>
   <label class="lab">User Email:-</label>
-  <span class="email">${userId.email}</span>
+  <span class="details">${userId.email}</span>
   <label class="lab">User Phone No.:-</label>
-  <span class="email">${userId.phone}</span>
+  <span class="details">${userId.phone}</span>
   </div>
   
   <div class="second">
@@ -97,17 +97,17 @@ html +=`
   </div>
   <br>
   <label class="lab">Street:-</label>
-  <span class="email">${userAddress.street}</span>
+  <span class="details">${userAddress.street}</span>
   <label class="lab">Suite:-</label>
-    <span class="email">${userAddress.suite}</span>
+    <span class="details">${userAddress.suite}</span>
     <label class="lab">City:-</label>
-    <span class="email">${userAddress.city}</span>
+    <span class="details">${userAddress.city}</span>
     <label class="lab">ZipCode:-</label>
-    <span class="email">${userAddress.zipcode}</span>
+    <span class="details">${userAddress.zipcode}</span>
     <label class="lab">Latitude:-</label>
-    <span class="email">lat:${addressGeo.lat}</span>
+    <span class="details">lat:${addressGeo.lat}</span>
     <label class="lab">Longitude:-</label>
-    <span class="email">lng:${addressGeo.lng} </span>
+    <span class="details">lng:${addressGeo.lng} </span>
     </div>
     <br>
     <div class="Company">
@@ -116,11 +116,11 @@ html +=`
     </div>
     <br>
     <label class="lab">Name:-</label>
-  <span class="email">${company.name}</span>
+  <span class="details">${company.name}</span>
   <label class="lab">catchPhrase:-</label>
-    <span class="email">${company.catchPhrase}</span>
+    <span class="details">${company.catchPhrase}</span>
     <label class="lab">bs:-</label>
-    <span class="email">${company.bs}</span>
+    <span class="details">${company.bs}</span>
        </div>
 </div>
 </div>
