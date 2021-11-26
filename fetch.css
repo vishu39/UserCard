@@ -138,8 +138,8 @@ a[href] {
 /*-----------------------------------2nd page------------------------------------*/
 /*------------------------this div is the main div---------------------------------*/
 .usersData {
-  margin: 3vh 0.1rem;
-  width: 99vw;
+  margin: 3vh 0;
+  width: 100%;
   height: 80vh;
   transition: all 0.5s;
   border-radius: 10px;
@@ -172,9 +172,14 @@ a[href] {
 /*--------------------------------------------------------*/
 .grid-1x3 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   width: 100%;
   padding: 1rem;
+}
+@media Screen and (min-width: 500px) {
+  .grid-1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 /*------------------------------------------------------------------------------*/
 .userimage1 {
@@ -195,7 +200,7 @@ a[href] {
 .userdetails {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 95%;
+  width: 98%;
   height: 100%;
   color: #fff;
   padding: 1rem;
@@ -209,16 +214,22 @@ a[href] {
   transform: scale(1.02);
 }
 .Address {
+  margin-top: 1rem;
   padding: 1rem;
   display: grid;
   background-color: var(--card-color);
   grid-template-columns: repeat(2, 1fr);
-  width: 99%;
+  width: 98%;
   height: 58%;
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px #02bfcb;
   transition: all 0.5s;
+}
+@media screen and (min-width: 500px) {
+  .Address {
+    margin-top: 0;
+  }
 }
 .Address:hover {
   transform: scale(1.02);
@@ -247,13 +258,18 @@ a[href] {
   box-shadow: 0 0 5px 1px #02bfcb;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 99%;
-  height: 39.5%;
+  width: 98%;
+  height: 39%;
   color: #fff;
   transition: all 0.5s;
 }
 .Company:hover {
   transform: scale(1.02);
+}
+@media screen and (min-width: 500px) {
+  .Company {
+    height: 39.5%;
+  }
 }
 /*----------------------------------------------------------------------------------------------------------*/
 /*-------------font of the the label and span-----------*/
