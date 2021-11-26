@@ -133,7 +133,7 @@ a[href] {
   background-color: #004f55;
 }
 /*-----------------------------------2nd page------------------------------------*/
-/*------------------------this div contain all the data*/
+/*------------------------this div is the main div---------------------------------*/
 .usersData {
   margin: 3vh 0.5rem;
   width: 98vw;
@@ -158,6 +158,14 @@ a[href] {
     height: 90vh;
   }
 }
+@media screen and (min-width: 1200px) {
+  .usersData {
+    margin: 10vh 18vw;
+    margin: 7vh 12vw;
+    width: 75%;
+    height: 90vh;
+  }
+}
 /*--------------------------------------------------------*/
 .grid-1x3 {
   display: grid;
@@ -173,14 +181,14 @@ a[href] {
   background-color: rgb(136, 130, 130);
   height: 80%;
   box-shadow: 0 0 3px 3px #02bfcb;
-  border-bottom: 1px solid #fff;
 }
 @media Screen and (min-width: 768px) {
   .userimage1 {
-    width: 100%;
+    width: 80%;
   }
 }
-/*---------------------------user detail div------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------All data cards---------------------------------------------*/
 .userdetails {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -197,8 +205,6 @@ a[href] {
 .userdetails:hover {
   transform: scale(1.02);
 }
-/*-------------------------------------------------------------------------------------*/
-/*------------------------------------company and address data---------------------------------------------*/
 .Address {
   padding: 1rem;
   display: grid;
@@ -217,7 +223,9 @@ a[href] {
 .addresslabel {
   font-size: 1.1rem;
   color: #02bfcb;
+  margin-bottom: 2rem;
   text-decoration: underline;
+  text-shadow: 2px 1px #fff;
 }
 @media screen and (min-width: 460px) {
   .addresslabel {
@@ -237,7 +245,7 @@ a[href] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  height: 40%;
+  height: 39.5%;
   color: #fff;
   transition: all 0.5s;
 }
@@ -246,18 +254,20 @@ a[href] {
 }
 /*----------------------------------------------------------------------------------------------------------*/
 /*-------------font of the the label and span-----------*/
-.email {
+.details {
   font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #fff;
 }
 .lab {
+  color: #02bfcb;
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #fff;
 }
 @media Screen and (min-width: 768px) {
-  .email {
+  .details {
     font-size: 1.3rem;
   }
   .lab {
@@ -278,10 +288,12 @@ a[href] {
   color: var(--button-color);
   border-radius: 10px;
   outline: 0;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   width: 98%;
+  transition: transform 0.5s;
 }
 .submit2:hover {
+  transform: scale(1.02);
   background-color: #004f55;
 }
 .userlab {
