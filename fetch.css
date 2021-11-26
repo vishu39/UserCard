@@ -213,7 +213,7 @@ a[href] {
   display: grid;
   background-color: var(--card-color);
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  width: 99%;
   height: 58%;
   color: #fff;
   border-radius: 10px;
@@ -247,7 +247,7 @@ a[href] {
   box-shadow: 0 0 5px 1px #02bfcb;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  width: 99%;
   height: 39.5%;
   color: #fff;
   transition: all 0.5s;
