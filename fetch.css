@@ -163,7 +163,7 @@ a[href] {
 .userdetails {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 98%;
+  width: 97%;
   height: 100%;
   color: #fff;
   padding: 1rem;
@@ -182,7 +182,7 @@ a[href] {
   display: grid;
   background-color: var(--card-color);
   grid-template-columns: repeat(2, 1fr);
-  width: 98%;
+  width: 99%;
   height: 58%;
   color: #fff;
   border-radius: 10px;
@@ -221,7 +221,7 @@ a[href] {
   box-shadow: 0 0 5px 1px var(--shadow-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 98%;
+  width: 99%;
   height: 39%;
   color: #fff;
   transition: all 0.5s;
@@ -272,7 +272,7 @@ a[href] {
 }
 @media Screen and (min-width: 500px) {
   .btndiv {
-  width: 97%;
+    width: 97%;
   }
 }
 @media Screen and (min-width: 768px) {
