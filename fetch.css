@@ -272,7 +272,7 @@ a[href] {
 }
 @media Screen and (min-width: 500px) {
   .btndiv {
-  width: 98%;
+  width: 97%;
   }
 }
 @media Screen and (min-width: 768px) {
