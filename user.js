@@ -69,8 +69,8 @@ let showMoreInformation=async function(id){
   mainDiv.innerHTML = html;
   }
         //---------------------getting the value of url search path------------------
-       let url_data=window.location.href;
-       let url=new URL(url_data);
+       let urlData=window.location.href;
+       let url=new URL(urlData);
        let id=url.searchParams.get("id");
        let name=url.searchParams.get("name");
  showMoreInformation(id);
