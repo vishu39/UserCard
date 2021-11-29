@@ -270,6 +270,11 @@ a[href] {
   width: 94%;
   display: flex;
 }
+@media Screen and (min-width: 500px) {
+  .btndiv {
+  width: 96%;
+  }
+}
 @media Screen and (min-width: 768px) {
   .btndiv {
     width: 68.5%;
