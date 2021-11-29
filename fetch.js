@@ -1,21 +1,21 @@
 //---------------------------fetching the user data--------------------------------------------------------
-let fetchUser=async function(){
-    const response=await fetch('https://jsonplaceholder.typicode.com/users');
-    let users=await response.json();
-        return users;
+let fetchUsers = async function () {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  let users = await response.json();
+  return users;
 }
 //----------------------------------------------------------------------------------------------------------
 //-------------------------------for displaying the user data-------------------
-let displayUserCard= async function(){
-    let mainDiv=document.querySelector(".main");
-   let html='';
-    let users=await fetchUser();
-    users.forEach((user)=>{
-      //making new url
-      let url = new URL(`http://127.0.0.1:5500/user.html?id=${user.id}&name=${user.name}`);
+let displayUserCard = async function () {
+  let mainDiv = document.querySelector(".main");
+  let html = '';
+  let users = await fetchUsers();
+  users.forEach((user) => {
+    //making new url
+    let url = new URL(`http://127.0.0.1:5500/user.html?id=${user.id}&name=${user.name}`);
     //getting value of id and name
-      let params = new URLSearchParams(url.search);
-    html +=`<div class="card">
+    let params = new URLSearchParams(url.search);
+    html += `<div class="card">
     <div class="upper">
     <img class="images" src="avatar-3637425_960_720.png" alt="" />
     </div>
@@ -26,7 +26,7 @@ let displayUserCard= async function(){
     </div>
     </div> `
   });
-mainDiv.innerHTML=html;
+  mainDiv.innerHTML = html;
 }
 displayUserCard();
 
