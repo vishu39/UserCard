@@ -1,15 +1,16 @@
 //---------------------------fetching the user data--------------------------------------------------------
-let fetchUsers = async function () {
-  const response = await fetch('https://jsonplaceholder.typicode.com/users');
-  let users = await response.json();
-  return users;
-}
+// let fetchUsers = async function () {
+//   const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//   let users = await response.json();
+//   return users;
+// }
 //----------------------------------------------------------------------------------------------------------
 //-------------------------------for displaying the user data-------------------
 let displayUserCard = async function () {
   let mainDiv = document.querySelector(".main");
   let html = '';
-  let users = await fetchUsers();
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  let users = await response.json();
   users.forEach((user) => {
     //making new url
     let url = new URL(`http://127.0.0.1:5500/user.html?id=${user.id}&name=${user.name}`);
